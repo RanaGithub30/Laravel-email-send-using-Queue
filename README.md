@@ -20,25 +20,25 @@
 
             QUEUE_CONNECTION=database
 
-    - After that we need to generate migration and create tables for queue. So let's run bellow command for queue database tables
+   - After that we need to generate migration and create tables for queue. So let's run bellow command for queue database tables
 
             a) php artisan queue:table
             b) php artisan migrate
 
-    - Now we will create queue job by following command, this command will create queue job file with Queueable. So let's run bellow command
+   - Now we will create queue job by following command, this command will create queue job file with Queueable. So let's run bellow command
 
             php artisan make:job SendEmailJob
 
-    - now you have SendEmailJob.php file in "Jobs" directory. So let's see that file and put bellow code on that file.
-    - Now create a route to execute the email send functionality
-    - Next, you must have to run following command to see queue process, you must have to keep start this command
+   - now you have SendEmailJob.php file in "Jobs" directory. So let's see that file and put bellow code on that file.
+   - Now create a route to execute the email send functionality
+   - Next, you must have to run following command to see queue process, you must have to keep start this command
 
             php artisan queue:work
 
-    - All the required steps have been done, now you have to type the given below command and hit enter to run the Laravel app
+   - All the required steps have been done, now you have to type the given below command and hit enter to run the Laravel app
 
             php artisan serve
 
-    - Now, Go to your web browser, type the given URL and view the app output
+   - Now, Go to your web browser, type the given URL and view the app output
            
             http://127.0.0.1:8000/email-test
